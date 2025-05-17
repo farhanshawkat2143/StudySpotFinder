@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wifi_speeds">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="noise_levels">
+        <item>Quiet</item>
+        <item>Moderate</item>
+        <item>Noisy</item>
+    </string-array>
+    <string-array name="seating_levels">
+        <item>Few</item>
+        <item>Moderate</item>
+        <item>Plenty</item>
+    </string-array>
+</resources>

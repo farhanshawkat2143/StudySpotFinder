@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6">
+
+    <!-- 🔵 Top Title Bar -->
+    <TextView
+        android:id="@+id/tvHomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2196F3"
+        android:text="Home"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|start"
+        android:paddingStart="16dp"
+        android:elevation="4dp" />
+
+    <!-- 🔍 Search Bar with Filter Button -->
+    <RelativeLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="68dp">
+
+        <!-- Rounded SearchView -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/search_background"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search locations"
+            android:layout_centerVertical="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <!-- Filter Button -->
+        <ImageButton
+            android:id="@+id/btnFilter"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Filter"
+            android:padding="8dp"
+            android:src="@drawable/filter" />
+    </RelativeLayout>
+
+    <!-- 🗺️ Map Fragment -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp" />
+
+    <!-- ➕ Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddSpot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="Add Spot"
+        android:src="@drawable/add"
+        android:backgroundTint="#03A9F4" />
+</FrameLayout>
