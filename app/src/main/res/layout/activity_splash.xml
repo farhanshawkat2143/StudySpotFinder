@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    android:padding="24dp">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo_"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toTopOf="@id/taglineText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/taglineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find the perfect study spot!"
+        android:textColor="#277c58"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Loading Animation -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/taglineText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
