@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ADD8E6">
+
+    <!-- Full-width Title without padding -->
+    <TextView
+        android:id="@+id/tvAddSpotTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2196F3"
+        android:text="Add Spot"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|start"
+        android:paddingStart="16dp"
+        android:elevation="4dp" />
+
+    <!-- Wrapped content with padding -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Spot Name -->
+        <EditText
+            android:id="@+id/etSpotName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Spot Name"
+            android:background="@drawable/search_input_bg"
+            android:padding="8dp"
+            android:textSize="14sp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/etSpotDescription"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Description"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_input_bg"
+            android:padding="8dp"
+            android:textSize="14sp" />
+
+        <!-- WiFi Speed -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WiFi Speed"
+            android:textColor="#2196F3"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+        <Spinner
+            android:id="@+id/spinnerWifiSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_background" />
+
+        <!-- Noise Level -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noise Level"
+            android:textColor="#FF9800"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+        <Spinner
+            android:id="@+id/spinnerNoiseLevel"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_background" />
+
+        <!-- Seating -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seating"
+            android:textColor="#4CAF50"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+        <Spinner
+            android:id="@+id/spinnerSeating"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_background" />
+
+        <!-- Power Outlets -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Power Outlets"
+                android:textColor="#9C27B0"
+                android:textSize="14sp"
+                android:layout_weight="1" />
+            <Switch
+                android:id="@+id/switchPowerOutlets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Rating -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textColor="#FFC107"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="1"
+            android:isIndicator="false"
+            android:theme="@style/RatingBarTheme" />
+
+        <!-- Map -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Location on Map"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp" />
+        <FrameLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="4dp">
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Spot"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#03A9F4"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>
