@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Search Input -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/search_input_bg"
+            android:hint="Search locations"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:inputType="text" />
+
+        <!-- WiFi Speed Slider with Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WiFi Speed"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarWifiSpeed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#2196F3"
+                android:thumbTint="#2196F3" />
+
+            <TextView
+                android:id="@+id/labelWifiSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:textSize="14sp"
+                android:textColor="#2196F3"
+                android:paddingStart="8dp"
+                android:minWidth="50dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Noise Level Slider with Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noise Level"
+            android:textSize="16sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarNoiseLevel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#FF9800"
+                android:thumbTint="#FF9800" />
+
+            <TextView
+                android:id="@+id/labelNoiseLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiet"
+                android:textSize="14sp"
+                android:textColor="#FF9800"
+                android:paddingStart="8dp"
+                android:minWidth="50dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Seating Capacity Slider with Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seating Capacity"
+            android:textSize="16sp"
+            android:textColor="#4CAF50"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarSeating"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#4CAF50"
+                android:thumbTint="#4CAF50" />
+
+            <TextView
+                android:id="@+id/labelSeating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Few"
+                android:textSize="14sp"
+                android:textColor="#4CAF50"
+                android:paddingStart="8dp"
+                android:minWidth="50dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Power Outlets Slider with Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power Outlets"
+            android:textSize="16sp"
+            android:textColor="#9C27B0"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarPowerOutlets"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#9C27B0"
+                android:thumbTint="#9C27B0" />
+
+            <TextView
+                android:id="@+id/labelPowerOutlets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Off"
+                android:textSize="14sp"
+                android:textColor="#9C27B0"
+                android:paddingStart="8dp"
+                android:minWidth="50dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Apply Filters Button -->
+        <Button
+            android:id="@+id/btnApplyFilters"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Apply Filters"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#424242" />
+
+    </LinearLayout>
+</ScrollView>
